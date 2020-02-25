@@ -2,14 +2,14 @@
 unsigned long micros_sp = 0, micros_th = 0;
 volatile int tz;
 volatile int sz;
-volatile int sp; //импульсы спидометра (Speedometer Pulses)
-volatile int th; //импульсы тахометра (Tachometer pulses
-//массив аналоговых значений ( array of analog values
+volatile int sp; //Speedometer Pulses)
+volatile int th; //Tachometer pulses
+//array of analog values
 int analogInput [3] = {0,0,0};
-//массив цифровых значений (array of numerical values)
+//array of numerical values
 int digitalInput[14] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 String resultString = ""; //строка (line?)
-int i; //счетчик циклов (cycle counter)
+int i; //cycle counter
 //************************************************** ******************
 void setup() {
   Serial.begin(115200);
@@ -22,7 +22,7 @@ void setup() {
 
 void loop() {
   // Read Analog Signals
-  analogInput[0]   =      analogRead(0);         // BS Voltage?   (M10-1 pin 3)
+  analogInput[0]   =      analogRead(0);         // VS Voltage?   (M10-1 pin 3)
   analogInput[1]   =      analogRead(1);         // Fuel Level (M10-3 pin 1,7)
   analogInput[2]   =      analogRead(2);         // Coolant Temp  (M10-3 pin 8)
 
