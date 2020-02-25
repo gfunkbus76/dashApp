@@ -43,36 +43,37 @@ Window {
     property int    varAirBag:      sourceData[17]
     property int    varSeatBelt:    sourceData[18]
 
-    //массив sourceData получаемый от Arduino
-    /*
-    === ДАТЧИКИ ===
-    0   скорость
-    1   обороты двигателя
-    2   одометр
-    3   напряжение бортовой сети
-    4   уровень топлива
-    5   температура ОЖ
-    6   температура наружнего воздуха
+    // array sourceData received from Arduino
+    / *
+    === SENSORS ===
+    0 speed
+    1 engine speed
+    2 odometer
+    3 voltage on-board network
+    4 fuel level
+    5 coolant temperature
+    6 outdoor temperature
 
-    === ЛАМПЫ ===
-    7   давление масла
-    8   check engine
-    9   зарядка аккумулятора
-    10  тормоза
-    11  ABS
-    12  иммобилайзер
-    13  открыта дверь
-    14  открыт багажник
-    15  левый поворотник
-    16  правый поворотник
-    17  дальний свет
-    18  передние туманки
-    19  AIR BAG
-    20  Ремни безопасности
-    */
+    === LAMPS ===
+    7 oil pressure
+    8 check engine
+    9 battery charge
+    10 brakes
+    11 ABS
+    12 immobilizer
+    13 the door is open
+    14 trunk open
+    15 left turn signal
+    16 right turn signal
+    17 high beam
+    18 front tumanki
+    19 AIR BAG
+    20 seat belts
+    * /
 
-    // загружать приборы только после того как загрузится маска панели
-    Loader {
+
+// load devices only after the panel mask loads
+Loader {
         id: loader
         asynchronous: true
         active: false
@@ -91,8 +92,9 @@ Window {
         }
     }
 
-    // функция нужна для иконок
-    // без нее не воспринимает ноль как ЛОЖЬ
+
+    // function is needed for icons
+    // without it, zero is not perceived as FALSE
     function isVisible(value) {
         return value > 0;
     }
