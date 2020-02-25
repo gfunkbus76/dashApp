@@ -1,6 +1,6 @@
-﻿39350-23910	датчик положения распредвала
-96420-4A600	датчик скорости вращения вала КПП
-94460-2D030	датчик уровня топлива
+﻿39350-23910	Camshaft Position Sensor
+96420-4A600	Gearbox shaft speed sensor
+94460-2D030	Fuel level Sensor
 
-96985-2D000	датчик температуры наружнего воздуха
-приходит на М19-2 pin 3 климат контроля
+96985-2D000	Outdoor temperature Sensor
+comes on the M19-2 pin 3 climate control
